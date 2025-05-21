@@ -22,7 +22,7 @@ export default function Menu() {
   }
 
   return (
-    <ul className="flex gap-3">
+    <ul className="flex gap-3 flex-wrap">
       {renderizarItem('/rotas/basicas', 'Rota Básica', 'pt')}
       {renderizarItem('/rotas/basicas/aninhada', 'Rota Aninhada', 'pt')}
       {renderizarItem('/rotas/dinamicas/produto/3', 'Produto #3', 'pt')}
@@ -35,6 +35,10 @@ export default function Menu() {
       )}
       {renderizarItem('/rotas/i18n/saudacao', 'Saudação PT', 'pt')}
       {renderizarItem('/rotas/i18n/saudacao', 'Saudação EN', 'en')}
+      {renderizarItem('/render/ssg/simples', 'SSG Simples', 'en')}
+      {renderizarItem('/render/ssg/filme', 'Filme SSG', 'pt')}
+      {renderizarItem('/render/ssg/personagem', 'Personagem SW', 'pt')}
+      {renderizarItem('/render/ssg/produtos', 'Produtos', 'pt')}
     </ul>
   )
 }

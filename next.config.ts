@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
     locales: ['pt', 'en'],
     defaultLocale: 'pt',
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'dummyimage.com',
+        pathname: '**',
+      },
+    ],
+  },
 }
 
 export default nextConfig
