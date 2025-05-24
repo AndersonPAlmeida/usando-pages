@@ -41,6 +41,11 @@ export default function Menu() {
       {renderizarItem('/render/ssg/produtos', 'Produtos SSG', 'pt')}
       {renderizarItem('/render/isr', 'Produtos ISR', 'pt')}
       {renderizarItem('/render/ssr', 'Produtos SSR', 'pt')}
+      {renderizarItem(
+        '/render/ssg/catalogo/6438753a-29cb-40ea-97fb-c30fc9ec33a0',
+        'Catálogo',
+        'pt',
+      )}
     </ul>
   )
 }
