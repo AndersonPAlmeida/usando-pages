@@ -11,7 +11,7 @@ interface PaginaProdutosProps {
   data: string
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const resposta = await fetch('http:\\localhost:3000/api/produtos')
   const produtos = await resposta.json()
   const data = new Date().toLocaleTimeString('pt-BR')
@@ -21,13 +21,12 @@ export async function getStaticProps() {
       produtos,
       data,
     },
-    revalidate: 60 * 60, // 1 hora
   }
 }
-export default function PaginaISR({ produtos, data }: PaginaProdutosProps) {
+export default function PaginaSSR({ produtos, data }: PaginaProdutosProps) {
   return (
     <Pagina>
-      <h1>Renderização Incremental (ISR)</h1>
+      <h1>Renderização no Servidor (SSR)</h1>
       <h2>Gerado Em {data}</h2>
       <ul>
         {produtos.map((produto) => {

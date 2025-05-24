@@ -40,6 +40,7 @@ export default function Menu() {
       {renderizarItem('/render/ssg/personagem', 'Personagem SW', 'pt')}
       {renderizarItem('/render/ssg/produtos', 'Produtos SSG', 'pt')}
       {renderizarItem('/render/isr', 'Produtos ISR', 'pt')}
+      {renderizarItem('/render/ssr', 'Produtos SSR', 'pt')}
     </ul>
   )
 }
